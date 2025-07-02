@@ -19,15 +19,31 @@ export default function App() {
         borderRadius: 5,
       }}
     >
-      <Text onLongPress={drag}>{task.title}</Text>
+      <View style={styles.boardTitle}>
+        <Text onLongPress={drag}>{task.title}</Text>
+        <MaterialIcons
+          name="drag-handle"
+          size={24}
+          color="grey"
+          onLongPress={drag}
+        ></MaterialIcons>
+      </View>
     </View>
   );
 
   const renderBoard = ({ item: board, drag }) => (
     <View style={styles.boardContainer}>
-      <Text style={styles.boardTitle} onLongPress={drag}>
-        {board.project}
-      </Text>
+      <View style={styles.boardTitle}>
+        <Text style={styles.boardTitle} onLongPress={drag}>
+          {board.project}
+        </Text>
+        <MaterialIcons
+          name="drag-indicator"
+          size={24}
+          color="grey"
+          onLongPress={drag}
+        ></MaterialIcons>
+      </View>
 
       <DraggableFlatList
         data={board.tasks}
@@ -40,7 +56,7 @@ export default function App() {
           AsyncStorage.setItem("boardsOrder", JSON.stringify(updatedBoards));
         }}
         renderItem={renderTask}
-        nestedScrollEnabled
+        nestedScrollEnabled={false}
       />
     </View>
   );
@@ -187,11 +203,14 @@ const styles = StyleSheet.create({
     borderColor: "#ddd",
   },
   boardTitle: {
+    flexDirection: "row", // Arrange children horizontally
+    justifyContent: "space-between", // Push content to ends
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 8,
   },
 });
+
 const SpacesTabs = [
   {
     id: 1,
