@@ -1,0 +1,145 @@
+[
+  {
+    "id": 1,
+    "order": 1,
+    "name": "Workstation",
+    "icon": "work",
+    "color": "#6200ee",
+    "boards": [
+      {
+        "id": 1,
+        "order": 1,
+        "project": "Engneering",
+        "tasks": [
+          {
+            "id": 1,
+            "order": 1,
+            "title": "Task 1: Setup develcatopment environment"
+          },
+          {
+            "id": 2,
+            "order": 2,
+            "title": "Task 2: Create first Hello World app"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "order": 2,
+        "project": "Designing",
+        "tasks": [
+          {
+            "id": 1,
+            "order": 1,
+            "title": "Task 1: Create wireframes"
+          },
+          {
+            "id": 2,
+            "order": 2,
+            "title": "task 2: Design UI components"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "order": 2,
+    "name": "Projects",
+    "icon": "folder",
+    "color": "#03dac6",
+    "boards": [
+      {
+        "id": 1,
+        "order": 1,
+        "project": "one connect",
+        "tasks": [
+          {
+            "id": 1,
+            "order": 1,
+            "title": "Task 1: add dark theme"
+          },
+          {
+            "id": 2,
+            "order": 2,
+            "title": "Task 2: change icon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "order": 3,
+    "name": "Personal",
+    "icon": "person",
+    "color": "#ff0266",
+    "boards": [
+      {
+        "id": 1,
+        "order": 1,
+        "project": "information",
+        "tasks": [
+          {
+            "id": 1,
+            "order": 1,
+            "title": "Task 1: username and password"
+          },
+          {
+            "id": 2,
+            "order": 2,
+            "title": "Task 2: date of birth"
+          },
+          {
+            "id": 3,
+            "order": 3,
+            "title": "Task 3: address and phone number"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "order": 4,
+    "name": "Plans",
+    "icon": "event",
+    "color": "#018786",
+    "boards": [
+      {
+        "id": 1,
+        "order": 1,
+        "project": "idk what to write",
+        "tasks": [
+          {
+            "id": 1,
+            "order": 1,
+            "title": "Task 1: do task 2"
+          },
+          {
+            "id": 2,
+            "order": 2,
+            "title": "Task 2: do task 1"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "order": 2,
+        "project": "idk what to write 2",
+        "tasks": [
+          {
+            "id": 1,
+            "order": 1,
+            "title": "Task 1: do task 2 again"
+          },
+          {
+            "id": 2,
+            "order": 2,
+            "title": "task 2: do task 1 again"
+          }
+        ]
+      }
+    ]
+  }
+]
