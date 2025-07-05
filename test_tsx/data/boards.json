@@ -3,7 +3,7 @@
     "id": 1,
     "order": 1,
     "name": "Workstation",
-    "icon": "work",
+    "Project": "work",
     "color": "#6200ee",
     "boards": [
       {
@@ -46,7 +46,7 @@
     "id": 2,
     "order": 2,
     "name": "Projects",
-    "icon": "folder",
+    "Project": "folder",
     "color": "#03dac6",
     "boards": [
       {
@@ -72,7 +72,7 @@
     "id": 3,
     "order": 3,
     "name": "Personal",
-    "icon": "person",
+    "Project": "person",
     "color": "#ff0266",
     "boards": [
       {
@@ -103,7 +103,7 @@
     "id": 4,
     "order": 4,
     "name": "Plans",
-    "icon": "event",
+    "Project": "event",
     "color": "#018786",
     "boards": [
       {

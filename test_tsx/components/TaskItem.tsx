@@ -1,7 +1,7 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import type { TaskItem as TaskType } from "..";
+import type { TaskItem as TaskType } from "../app";
 
 type Props = {
   task: TaskType;
@@ -27,7 +27,7 @@ export default function TaskItem({ task, onLongPress }: Props) {
 const styles = StyleSheet.create({
   boardTask: {
     padding: 10,
-    backgroundColor: "#eee",
+    backgroundColor: "#e8e8e8",
     marginVertical: 4,
     borderRadius: 5,
   },
