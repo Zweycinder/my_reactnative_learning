@@ -2,14 +2,15 @@ import BottomSheet from "@gorhom/bottom-sheet";
 
 import { MaterialIcons } from "@expo/vector-icons";
 import React, { useRef, useState } from "react";
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { Pressable, SafeAreaView, StyleSheet, Text, View } from "react-native";
 
 import DraggableFlatList from "react-native-draggable-flatlist";
-import Board from "../components/Board";
+import Board from "../components/homepage/Board";
 
 import CustomBottomSheet from "@/components/CustomBottomSheet";
+import AddBoard from "@/components/homepage/addboard";
 import AddSpaceContent from "../components/homepage/addspaces";
-import SpaceCard from "../components/SpaceCards";
+import SpaceCard from "../components/homepage/SpaceCards";
 import spacesData from "../data/boards.json";
 
 export type SpaceItem = {
@@ -32,7 +33,9 @@ export type TaskItem = {
   title: string;
 };
 export default function HomeScreen() {
-  const bottomSheetRef = useRef<BottomSheet>(null);
+  const bottomSheetAddSpace = useRef<BottomSheet>(null);
+  const bottomSheetAddBoard = useRef<BottomSheet>(null);
+
   const [selectedSpaceId, setSelectedSpaceId] = useState<number | null>(null);
   const [data, setData] = useState<SpaceItem[]>([
     ...spacesData.map((space: any) => ({
@@ -46,7 +49,7 @@ export default function HomeScreen() {
 
   const cardPress = (space: SpaceItem) => {
     if (space.id === -1) {
-      bottomSheetRef.current?.snapToIndex(2);
+      bottomSheetAddSpace.current?.snapToIndex(2);
     } else {
       setSelectedSpaceId(space.id);
       setBoards(space.boards || []);
@@ -86,7 +89,13 @@ export default function HomeScreen() {
             }}
           >
             <Text style={styles.Title2}>Boards</Text>
-            <MaterialIcons name="add" size={24} style={{ marginRight: 10 }} />
+            <Pressable
+              onPress={() => {
+                bottomSheetAddBoard.current?.snapToIndex(1);
+              }}
+            >
+              <MaterialIcons name="add" size={24} style={{ marginRight: 10 }} />
+            </Pressable>
           </View>
 
           <DraggableFlatList
@@ -98,8 +107,11 @@ export default function HomeScreen() {
         </View>
       </SafeAreaView>
 
-      <CustomBottomSheet bottomSheetRef={bottomSheetRef}>
+      <CustomBottomSheet bottomSheetRef={bottomSheetAddSpace}>
         <AddSpaceContent />
+      </CustomBottomSheet>
+      <CustomBottomSheet bottomSheetRef={bottomSheetAddBoard}>
+        <AddBoard />
       </CustomBottomSheet>
     </>
   );

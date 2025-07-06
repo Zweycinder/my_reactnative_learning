@@ -1,7 +1,7 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import type { TaskItem as TaskType } from "../app";
+import type { TaskItem as TaskType } from "../../app";
 
 type Props = {
   task: TaskType;

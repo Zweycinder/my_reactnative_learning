@@ -18,7 +18,6 @@ const COLORS = [
   "#C7CEEA",
 ];
 
-// Sample projects data
 const PROJECTS = [
   { label: "To-Do", value: "0" },
   { label: "InProgress", value: "2" },
