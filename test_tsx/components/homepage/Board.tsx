@@ -3,7 +3,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import DraggableFlatList from "react-native-draggable-flatlist";
 
-import type { BoardItem, TaskItem as TaskType } from "../app";
+import type { BoardItem, TaskItem as TaskType } from "../../app";
 
 import TaskItem from "./TaskItem";
 
@@ -21,7 +21,6 @@ export default function Board({ board }: Props) {
       <View style={styles.boardTitle}>
         <Text style={styles.boardTitleText}>{board.project}</Text>
         <View style={{ flexDirection: "row" }}>
-          <MaterialIcons name="add" size={24} color="grey" />
           <MaterialIcons
             name="drag-indicator"
             size={24}
